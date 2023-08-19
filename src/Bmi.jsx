@@ -10,8 +10,11 @@ function Bmi() {
     function CalculateBmi() {
         SetBmi( Math.floor((weight * 100 * 100) / (height * height))) 
             
-        
+       
+    setWeight('');
+    setHeight(''); 
     }
+
 
 
     return (
@@ -29,7 +32,7 @@ function Bmi() {
             </div>
             
             <div className='result'>
-                <h2>Your BMI  :   {result}</h2>
+                <h2>Your BMI is :   {result}</h2>
             </div>
             </div>
         </>
