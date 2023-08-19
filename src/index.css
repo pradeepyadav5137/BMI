@@ -43,3 +43,7 @@
   border-radius: 10px;
  background-color: aqua;
 }
+
+.button:hover button{
+  background-color: orange;
+}
