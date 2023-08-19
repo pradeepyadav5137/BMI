@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './index.css'
 
 function Bmi() {
 
@@ -7,7 +8,7 @@ function Bmi() {
     const [result , SetBmi] = useState("")
 
     function CalculateBmi() {
-        SetBmi( (weight * 100 * 100) / (height * height)) 
+        SetBmi( Math.floor((weight * 100 * 100) / (height * height))) 
             
         
     }
@@ -15,12 +16,21 @@ function Bmi() {
 
     return (
         <>
+        <div className='content'>
+              <h1>  CALCULATE YOUR BODY MASS INDEX</h1>
+              <div className="height">
              <label htmlFor="">Height( in cm )  </label><input type="number" name="" id="" value={height} onChange={(e) => setHeight(e.target.value)} />
+             </div>
+             <div className="weight">
           <label htmlFor="">   Weight( in Kg ) </label><input type="number" name="" id="" value={weight} onChange={(e) => setWeight(e.target.value)} />
-
+          </div>
+          <div className="button">
             <button onClick={CalculateBmi}>Caculate BMI</button>
-            <div>
-                <h2>{result}</h2>
+            </div>
+            
+            <div className='result'>
+                <h2>Your BMI  :   {result}</h2>
+            </div>
             </div>
         </>
     )
